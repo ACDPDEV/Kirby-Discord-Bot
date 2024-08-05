@@ -15,3 +15,6 @@
 > k! random
 > (OUTPUT: Random meme de Tenor GIFS)
 > ```
+
+> ## Discord server:
+> 😺 [GatoCraftMC](https://discord.gg/wR9nUNecDF)
