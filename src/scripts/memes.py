@@ -17,19 +17,3 @@ def get_meme() -> list:
     pattern = r"https://media.tenor.com/[\w.]*"
     image_url_list = re.findall(pattern, str(content))
     return image_url_list
-
-def random_meme(random_number) -> str:
-    """
-    Get a random item from get_meme()
-    """
-
-    meme_list = get_meme()
-    random_index = random_number
-    try:
-        meme = meme_list[random_index]
-    except IndexError:
-        meme = None
-    if meme:
-        return meme
-    else:
-        random_meme(random_number)

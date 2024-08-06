@@ -11,7 +11,7 @@ import src.constans.LOGS as LOGS
 import src.constans.OUTPUTS as OUTPUTS
 import src.constans.OTHERS as OTHERS
 
-from src.scripts.memes import random_meme
+from src.scripts.memes import get_meme
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -36,7 +36,7 @@ async def on_message(message):
     """
 
     if message.content.startswith(COMMANDS.RANDOM):
-        OUTPUTS.RANDOM = random_meme(random.randint(0, 50)) # Movida rara
+        OUTPUTS.RANDOM = random.choice(get_meme())
         if OUTPUTS.RANDOM:
             print(LOGS.LOG_200)
             await message.channel.send(OUTPUTS.RANDOM)
